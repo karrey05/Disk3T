@@ -1,8 +1,6 @@
 # 3/8/2016 
-# Based on: http://www.r-bloggers.com/twitter-sentiment-analysis-with-r/
-# with updated authentication, and simplified data flow and data output
-# put in a cron job and run daily at the end of the day
-
+# Aggregate hourly grabs of tweets with "bought" in them, 
+# and produce a wordcloud. 
 
 #connect all libraries
  library(tm) 
@@ -12,28 +10,38 @@
  library(stringr)
  library(ggplot2)
 
- df <- read.csv("bought/2016-03-08-14_text.csv")
+ setwd("/home/yudong/data/Twitter") 
+ # consolidate hourly file 
+ imgfile <- format(Sys.time(), "bought/%Y-%m-%d.png")
+ dailyptn <- format(Sys.time(), "^%Y-%m-%d-[0-9][0-9]_text.csv")
+ files=list.files("bought/", pattern=dailyptn) 
 
- df$text <- as.factor(df$text)
+ alltext = data.frame(); 
 
- # clean up 
- clean_text <- laply(df$text, function(some_txt){
-   some_txt = gsub("(RT|via)((?:\\b\\W*@\\w+)+)", "", some_txt)
-   some_txt = gsub("@\\w+", "", some_txt)
-   some_txt = gsub("[[:punct:]]", "", some_txt)
-   some_txt = gsub("[[:digit:]]", "", some_txt)
-   some_txt = gsub("http\\w+", "", some_txt)
-   some_txt = gsub("[ \t]{2,}", "", some_txt)
-   some_txt = gsub("^\\s+|\\s+$", "", some_txt)
-   some_txt = gsub("amp", "", some_txt)
-   some_txt = gsub("tickets", "ticket", some_txt)
-   some_txt <- tolower(iconv(some_txt, "ASCII", "UTF-8", sub=""))
-   names(some_txt) = NULL
-   return(some_txt) 
- }) 
+ for (i in 1:length(files) ) {
+   cat("doing ", files[i], "\n")
+   df <- read.csv(paste("bought/", files[i], sep='')) 
 
- c1=removeWords(clean_text, stopwords("english"))
- c2=removeWords(c1, c("bought", "today", "just", "yesterday", "can", "home", 
+   df$text <- as.factor(df$text)
+
+   # clean up 
+   clean_text <- laply(df$text, function(some_txt){
+    some_txt = gsub("(RT|via)((?:\\b\\W*@\\w+)+)", "", some_txt)
+    some_txt = gsub("@\\w+", "", some_txt)
+    some_txt = gsub("[[:punct:]]", "", some_txt)
+    some_txt = gsub("[[:digit:]]", "", some_txt)
+    some_txt = gsub("http\\w+", "", some_txt)
+    some_txt = gsub("[ \t]{2,}", "", some_txt)
+    some_txt = gsub("^\\s+|\\s+$", "", some_txt)
+    some_txt = gsub("amp", "", some_txt)
+    some_txt = gsub("tickets", "ticket", some_txt)
+    some_txt <- tolower(iconv(some_txt, "ASCII", "UTF-8", sub=""))
+    names(some_txt) = NULL
+    return(some_txt) 
+   } ) 
+
+   c1=removeWords(clean_text, stopwords("english"))
+   c2=removeWords(c1, c("bought", "today", "just", "yesterday", "can", "home", 
                       "store", "last", "now", "back", "dont", "get", "trump", 
                       "time", "feel", "day", "went", "got", "spreading", "like", 
                       "new", "love", "first", "one", "great", "ago", "good", 
@@ -54,10 +62,19 @@
                       "cuz", "came", "thanks", "better", "super", "bring", "make", 
                       "help", "high", "nice", "month", "see", "tell", "definitely", 
                       "please", "hey", "pretty", "dollar", "find", "ill", "cute",
-                      "fucking", "everything"
+                      "fucking", "everything", "may", "worth", "getting", "hope", 
+                      "tho", "cause", "guess", "believe", "less", "fucked", "mad",
+                      "must", "pissed", "nobody", "forget", "doesnt", "sayin", 
+                      "says", "spent", "true", "asked", "coming", "sold", "thought", 
+                      "someone", "need", "remember", "caign", "candidates", "selffunding", 
+                      "feels", "hes", "else", "wont", "thats", "fact", "htt" 
                        ) ) 
 
- corpus = Corpus(VectorSource(c2))
+ alltext = c(alltext, c2) 
+
+ } # ene of for 
+
+ corpus = Corpus(VectorSource(alltext))
  tdm = TermDocumentMatrix(corpus)
  tdm = as.matrix(tdm)
 
@@ -69,10 +86,10 @@
  dm = data.frame(word=names(word_freqs), freq=word_freqs)
  
  # plot wordcloud
- wordcloud(dm$word, dm$freq, min.freq=50, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
+# wordcloud(dm$word, dm$freq, min.freq=80, max.words=100, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
 
  # save the image in png format
- png("MachineLearningCloud.png", width=12, height=8, units="in", res=300)
- wordcloud(dm$word, dm$freq, min.freq=50, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
+ png(imgfile, width=800, height=800, res=200)
+ wordcloud(dm$word, dm$freq, min.freq=80, max.words=100, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
  dev.off()
 
