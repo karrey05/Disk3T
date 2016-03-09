@@ -67,7 +67,10 @@
                       "must", "pissed", "nobody", "forget", "doesnt", "sayin", 
                       "says", "spent", "true", "asked", "coming", "sold", "thought", 
                       "someone", "need", "remember", "caign", "candidates", "selffunding", 
-                      "feels", "hes", "else", "wont", "thats", "fact", "htt" 
+                      "feels", "hes", "else", "wont", "thats", "fact", "htt", 
+                      "isnt", "play", "check", "break", "lot", "looks", "later", 
+                      "talk", "actually", "every", "almost", "whole", "show", 
+                      "weve", "gave", "saw", "extra", "late"
                        ) ) 
 
  alltext = c(alltext, c2) 
@@ -90,6 +93,6 @@
 
  # save the image in png format
  png(imgfile, width=800, height=800, res=200)
- wordcloud(dm$word, dm$freq, min.freq=80, max.words=100, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
+ wordcloud(dm$word, dm$freq, min.freq=40, max.words=100, random.order=FALSE, colors=brewer.pal(8, "Dark2"))
  dev.off()
 

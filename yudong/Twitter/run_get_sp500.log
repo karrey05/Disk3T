@@ -1,0 +1,2022 @@
+nohup: ignoring input
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-01->2015-12-31
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-02->2016-01-01
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-03->2016-01-02
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-04->2016-01-03
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-05->2016-01-04
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-06->2016-01-05
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-07->2016-01-06
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-08->2016-01-07
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-09->2016-01-08
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-10->2016-01-09
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-11->2016-01-10
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-12->2016-01-11
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-13->2016-01-12
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-14->2016-01-13
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-15->2016-01-14
+[1] "Using direct authentication"
+Warning message:
+In doRppAPICall("search/tweets", n, params = params, retryOnRateLimit = retryOnRateLimit,  :
+  5000 tweets were requested but the API can only return 0
+Error in twListToDF(list) : Empty list passed to twListToDF
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-16->2016-01-15
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-17->2016-01-16
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-18->2016-01-17
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-19->2016-01-18
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-20->2016-01-19
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-21->2016-01-20
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-22->2016-01-21
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-23->2016-01-22
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-24->2016-01-23
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-25->2016-01-24
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-26->2016-01-25
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-27->2016-01-26
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-28->2016-01-27
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-29->2016-01-28
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-30->2016-01-29
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-01-31->2016-01-30
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-01->2016-01-31
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-02->2016-02-01
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-03->2016-02-02
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-04->2016-02-03
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-05->2016-02-04
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-06->2016-02-05
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-07->2016-02-06
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-08->2016-02-07
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-09->2016-02-08
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-10->2016-02-09
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-11->2016-02-10
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-12->2016-02-11
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-13->2016-02-12
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-14->2016-02-13
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-15->2016-02-14
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-16->2016-02-15
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-17->2016-02-16
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-18->2016-02-17
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-19->2016-02-18
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-20->2016-02-19
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-21->2016-02-20
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-22->2016-02-21
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-23->2016-02-22
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-24->2016-02-23
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-25->2016-02-24
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-26->2016-02-25
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-27->2016-02-26
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
+
+Attaching package: ‘plyr’
+
+The following object is masked from ‘package:twitteR’:
+
+    id
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:plyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: methods
+2016-02-28->2016-02-27
+[1] "Using direct authentication"
+Error in check_twitter_oauth() : OAuth authentication error:
+This most likely means that you have incorrectly called setup_twitter_oauth()'
+Calls: setup_twitter_oauth -> check_twitter_oauth
+Execution halted
