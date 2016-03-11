@@ -12,7 +12,8 @@ workdir=/home/yudong/data/GSOD/Cassandra
 #for year in 1990; do 
 
 #for year in `seq 1991 2015`; do 
-for year in `seq 1995 2015`; do 
+#for year in `seq 1995 2015`; do 
+for year in `seq 2002 2015`; do 
   cd $gsoddir/$year
   tar xvf gsod_$year.tar
   gunzip *-$year.op.gz 
