@@ -70,7 +70,8 @@
                       "feels", "hes", "else", "wont", "thats", "fact", "htt", 
                       "isnt", "play", "check", "break", "lot", "looks", "later", 
                       "talk", "actually", "every", "almost", "whole", "show", 
-                      "weve", "gave", "saw", "extra", "late"
+                      "weve", "gave", "saw", "extra", "late", "hillaryboughtandsold",
+                      "read", "cruz" 
                        ) ) 
 
  alltext = c(alltext, c2) 
