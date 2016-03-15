@@ -16,4 +16,13 @@ CIK|Company Name|Form Type|Date Filed|Filename
 ...
 96793|SUNLINK HEALTH SYSTEMS INC|10-Q|2015-02-18|edgar/data/96793/0001193125-15-052611.txt
 
-The last field can be used to construct the URL to the file by appending "ftp://ftp.sec.gov/". 
+The last field can be used to construct the URL to the file by appending "ftp://ftp.sec.gov/" or "https://www.sec.gov/Archives/". 
+
+
+2. Upload to Cassandra with upload_masterfile_to_db.sh. 
+
+Sample query: 
+
+select date_filed, filename from master_table where company_name ='GAP INC' and form_type='10-Q' allow filtering;
+
+
