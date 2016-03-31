@@ -15,26 +15,22 @@ city.4.1="Guangzhou"
 lat.4.1=23.117 
 lon.4.1=113.25
 
-*US/EU
 * .row.col
-city.1.2="Los Angeles"
-lat.1.2=34.0194
-lon.1.2=-118.4108 
-city.2.2="Chicago"
-lat.2.2=41.8376
-lon.2.2=-87.6818
-*city.2.2="New York"
-*lat.2.2=40.7
-*lon.2.2=-74.0 
-city.3.2="Milan"
-lat.3.2=45.465
-lon.3.2=9.1836 
+city.1.2="Shenyang"
+lat.1.2=41.8
+lon.1.2=123.4
+city.2.2="Tangshan"
+lat.2.2=39.65 
+lon.2.2=118.18 
+city.3.2="Shijiazhuang"
+lat.3.2=38.04
+lon.3.2=114.51 
 *city.4.2="London"
 *lat.4.2=51.510
 *lon.4.2=-0.130 
-city.4.2="New Delhi"
-lat.4.2=28.6
-lon.4.2=77.23
+city.4.2="Zibo"
+lat.4.2=36.83 
+lon.4.2=118.07 
 
 'reinit' 
 
@@ -74,10 +70,10 @@ lon2=lon.ir.ic + 0.75
 lat1=lat.ir.ic - 0.75
 lat2=lat.ir.ic + 0.75
 
-'set cthick 6'
-'set cmark 0'
-'set grid vertical' 
 'set vrange 0 4000' 
+'set cthick 6'
+'set cmark 0' 
+'set grid vertical'
 'define ts=aave(no2, lon='lon1', lon='lon2', lat='lat1', lat='lat2')' 
 'd ts' 
 'draw title 'city.ir.ic
@@ -89,7 +85,7 @@ ir = ir + 1
 endwhile 
 
 'set rgb 60 255 255 255  10'
-'gxyat -x 800 -y 1000 2x4-ts-cities.png' 
+'gxyat -x 800 -y 1000 China-ts-cities.png' 
 *'printim 2x4-ts-cities.gif x800 y1000 white'
 
 
