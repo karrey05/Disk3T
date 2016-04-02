@@ -61,7 +61,7 @@ color.10=900
 * apply general styles 
 'si_styles' 
 
-parea='1 10 0.5 8.0'
+parea='1 10.5 0.5 8.0'
 
 ir=1
 while (ir <= 10)
@@ -83,7 +83,10 @@ if (ir > 9)
 endif 
 
 'set vrange 500 4500' 
-'set cthick 12'
+'set cthick 40' 
+if (ir > 9 ) 
+ 'set cthick 60'
+endif 
 'set cmark 0' 
 'set ccolor 'color.ir
 'set grid off' 

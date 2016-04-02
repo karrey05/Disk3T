@@ -3,6 +3,12 @@
 'set font 10 file /usr/share/fonts/truetype/freefont/FreeSans.ttf'
 'set font 11 file /usr/share/fonts/truetype/freefont/FreeSansBold.ttf'
 
+'set lwid 20 2.0' 
+'set lwid 30 3.0' 
+'set lwid 40 4.0' 
+'set lwid 50 5.0' 
+'set lwid 60 6.0' 
+'set lwid 70 7.0' 
 
 'set grads off'
 'set xlopts 1 0.5 0.15'
