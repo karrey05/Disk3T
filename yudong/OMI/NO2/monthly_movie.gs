@@ -8,6 +8,7 @@
 'set lat 10 50' 
 'set lon 60 140' 
 'set time 1jan2005 1feb2016'
+'set time 1jan2016 1feb2016'
  'q dims'
  line=sublin(result, 5)
  t1=subwrd(line, 11)
@@ -28,7 +29,7 @@ while(t1 <= t2)
  'set ylopts 1 0.5 0.15'
  'set clevs 0 500 1000 1500 2000 2500 3000 3500 4000' 
  'set gxout shaded' 
- 'd no2' 
+ 'd const(no2, 0, -u)' 
 * 'cbarn' 
  'draw title NO2 'tstr 
 * gxyat does not support gif 
@@ -38,3 +39,5 @@ while(t1 <= t2)
 t1=t1+1 
 endwhile
 
+'gxprint 201602.svg svg' 
+'gxprint 201602.png png' 

@@ -65,8 +65,6 @@ while (ir <= rows)
 'set vpage 'vx1' 'vx2' 'vy1' 'vy2
 'set grads off'
 'set parea 'parea
-'set xlopts 1 0.5 0.15'
-'set ylopts 1 0.5 0.15'
 
 * 1-deg box around each city
 lon1=lon.ir.ic - 0.75
@@ -74,9 +72,17 @@ lon2=lon.ir.ic + 0.75
 lat1=lat.ir.ic - 0.75
 lat2=lat.ir.ic + 0.75
 
+* customize graphics
+'set xlopts 1 0.5 0.15'
+'set ylopts 1 0.5 0.15'
 'set cthick 6'
 'set cmark 0'
+'set font 5'
+'set font 10 file /usr/share/fonts/truetype/freefont/FreeSans.ttf'
+'set font 11 file /usr/share/fonts/truetype/freefont/FreeSansBold.ttf'
+'set font 12 file /usr/share/fonts/truetype/droid/DroidSans.ttf'
 'set grid vertical' 
+
 'set vrange 0 4000' 
 'define ts=aave(no2, lon='lon1', lon='lon2', lat='lat1', lat='lat2')' 
 'd ts' 
@@ -91,5 +97,6 @@ endwhile
 'set rgb 60 255 255 255  10'
 'gxyat -x 800 -y 1000 2x4-ts-cities.png' 
 *'printim 2x4-ts-cities.gif x800 y1000 white'
+'gxprint 2x4-ts-cities.svg svg white'
 
 
