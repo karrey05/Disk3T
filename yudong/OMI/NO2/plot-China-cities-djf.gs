@@ -57,7 +57,7 @@ color.10=900
 'open no2_djf.ctl'
 'set x 1'
 'set y 1'
-'set time 1jan2006 1jan2016'
+'set time 1jan2005 1jan2016'
 * apply general styles 
 'si_styles' 
 
