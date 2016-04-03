@@ -71,7 +71,8 @@
                       "isnt", "play", "check", "break", "lot", "looks", "later", 
                       "talk", "actually", "every", "almost", "whole", "show", 
                       "weve", "gave", "saw", "extra", "late", "hillaryboughtandsold",
-                      "read", "cruz" 
+                      "read", "cruz", "refuting", "years", "loved", "set", "yall", 
+                      "special", "told", "narrative" 
                        ) ) 
 
  alltext = c(alltext, c2) 
