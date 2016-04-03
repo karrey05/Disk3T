@@ -1,4 +1,4 @@
-
+*4/2/16: do now use absolute units. Use Beijing 2005 value as baseline value
 'reinit'
 * center of cities
 * China
@@ -61,7 +61,7 @@ color.10=900
 * apply general styles 
 'si_styles' 
 
-parea='1 10.5 0.5 8.0'
+parea='1 10.5 1.0 8.3'
 
 ir=1
 while (ir <= 10)
@@ -82,7 +82,8 @@ if (ir > 9)
   lat2=41
 endif 
 
-'set vrange 500 4500' 
+*'set frame off'
+'set vrange 0.5 3' 
 'set cthick 40' 
 if (ir > 9 ) 
  'set cthick 60'
@@ -91,11 +92,17 @@ endif
 'set ccolor 'color.ir
 'set grid off' 
 'define ts=aave(no2, lon='lon1', lon='lon2', lat='lat1', lat='lat2')' 
-'d ts' 
+* set up Bejing baseline value 
+if (ir = 1) 
+  'define base=ts(t=1)' 
+endif
+'d ts/base' 
 'set strsiz 0.18'
 'set string 'color.ir
 ypos=8-ir*0.3
 'draw string 1.5 'ypos' 'city.ir
+'draw xlab Year'
+'draw ylab Ratio to Beijing 2005'
 
 ir = ir + 1
 endwhile 
