@@ -12,8 +12,8 @@ read_city <- function (city) {
 } 
 
   
-cities=c("Beijing", "Shijiazhuang", "Tangshan", "Zibo", "Guangzhou", "Xian", 
-         "Shanghai", "Nanjing", "Zhengzhou")
+cities=c("Guangzhou", "Wuhan", "Hefei", "Nanjing", "Shanghai", "Zhengzhou", "Xian", "Jinan", 
+         "Taiyuan", "Shijiazhuang", "Tianjin", "Beijing") 
 
 df=data.frame(year=2005:2016) 
 nc=length(cities) 
@@ -37,7 +37,7 @@ for (i in 2:nc) {
   stack_y[i] = stack_y[i-1] + df[1, i+1]
 }
 
-text(rep(2004.8, 9), stack_y, cities, cex=1.4, adj=c(1, 1))
+text(rep(2004.8, nc), stack_y, cities, cex=1.4, adj=c(1, 1))
 dev.off()
 
 #dev.copy(png, "no2_cities_2005-2016.png") 
