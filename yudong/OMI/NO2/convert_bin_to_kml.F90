@@ -10,7 +10,7 @@
 	implicit NONE
         integer, parameter :: nc=2880, nr=1440
 	real, parameter :: lat0=-89.9375, lon0=-179.9375, res=0.125
-	real, parameter :: vmin=1000, vmax=5000,  hmax=1000000   ! range of values 
+	real, parameter :: vmin=1000, vmax=4000,  hmax=1000000   ! range of values 
         
         real :: data(nc, nr), v, h, clat, clon
         integer i, j, it, iargc, ic, ir, ierr, ierr1, is, maxd, itype
@@ -80,7 +80,7 @@
              clon = lon0 + (i-1)* res 
        
 	write(12, '(a)')'	<Placemark>'
-        write(12, '(a, I0.0, a)')'		<styleURL>#', ic, '</styleURL>'
+        write(12, '(a, I0.0, a)')'		<styleUrl>#', ic, '</styleUrl>'
         write(12, '(a)')'		<Polygon>'
         write(12, '(a)')'			<extrude>1</extrude>'
         write(12, '(a)')'			<tessellate>1</tessellate>'
