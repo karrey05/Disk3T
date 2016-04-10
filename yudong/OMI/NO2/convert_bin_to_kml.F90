@@ -17,8 +17,8 @@
         character*200 :: infile, outfile, ctmp
         character*8 ::  colors(11)  !GRADS rainbow colors #4, 11, .., 6 (
                                     !http://cola.gmu.edu/grads/gadoc/colorcontrol.html
-        data colors/'1e3cffff', '00a0ffff', '00c8c8ff', '00d28cff', '00dc00ff', &
-                    'a0e632ff', 'e6dc32ff', 'e6af2dff', 'f08228ff', 'fa3c3cff', 'f00082ff'/
+        data colors/'ae3cffff', 'a0a0ffff', 'a0c8c8ff', 'a0d28cff', 'a0dc00ff', &
+               'a0e632ff', 'e6dc32ff', 'e6af2dff', 'f08228ff', 'fa3c3cff', 'f00082ff'/
 
 
 ! lat lon Year elev(m) yyyy mm dd snd(cm) swe(cm) 
@@ -52,16 +52,16 @@
         write(12, '(a)')'	</Style>'
       ! define custome styles
       Do ic=1, 11
-        write(12, '(a, I0.0, a)')'	<Style id="', ic, '">'
-        write(12, '(a)')'		<LineStyle>'
-       	write(12, '(a, a, a)')'			<color>', colors(ic), '</color>'
-       	write(12, '(a)')'		</LineStyle>'
-        write(12, '(a)')'		<PolyStyle>'
-       	write(12, '(a, a, a)')'			<color>', colors(ic), '</color>'
-        write(12, '(a)')'			<outline>0</outline>'
-        write(12, '(a)')'			<fill>1</fill>'
-        write(12, '(a)')'		</PolyStyle>'
-        write(12, '(a)')'	</Style>'
+!        write(12, '(a, I0.0, a)')'	<Style id="st', ic, '">'
+!        write(12, '(a)')'		<LineStyle>'
+!       	write(12, '(a, a, a)')'			<color>', colors(ic), '</color>'
+!       	write(12, '(a)')'		</LineStyle>'
+!        write(12, '(a)')'		<PolyStyle>'
+!       	write(12, '(a, a, a)')'			<color>', colors(ic), '</color>'
+!        write(12, '(a)')'			<outline>1</outline>'
+!        write(12, '(a)')'			<fill>1</fill>'
+!        write(12, '(a)')'		</PolyStyle>'
+!        write(12, '(a)')'	</Style>'
       End Do 
         
 !X is varying   Lon = 80 to 130   X = 2080.5 to 2480.5
@@ -80,7 +80,18 @@
              clon = lon0 + (i-1)* res 
        
 	write(12, '(a)')'	<Placemark>'
-        write(12, '(a, I0.0, a)')'		<styleUrl>#', ic, '</styleUrl>'
+!        write(12, '(a, I0.0, a)')'		<styleUrl>#st', ic, '</styleUrl>'
+        write(12, '(a)')'		<styleUrl>#defaultStyles</styleUrl>'
+        write(12, '(a)')'	<Style>'
+!        write(12, '(a)')'		<LineStyle>'
+!       	write(12, '(a, a, a)')'			<color>', colors(ic), '</color>'
+!       	write(12, '(a)')'		</LineStyle>'
+        write(12, '(a)')'		<PolyStyle>'
+       	write(12, '(a, a, a)')'			<color>', colors(ic), '</color>'
+!        write(12, '(a)')'			<outline>1</outline>'
+!        write(12, '(a)')'			<fill>1</fill>'
+        write(12, '(a)')'		</PolyStyle>'
+        write(12, '(a)')'	</Style>'
         write(12, '(a)')'		<Polygon>'
         write(12, '(a)')'			<extrude>1</extrude>'
         write(12, '(a)')'			<tessellate>1</tessellate>'
@@ -105,6 +116,7 @@
        End Do 
        write(12, '(a)')'</Document>'
        write(12, '(a)')'</kml>'
+       write(12, *) 
        close(12) 
 
 	end 
