@@ -26,7 +26,7 @@ png("no2_cities_2005-2016.png", width=1000, height=700, bg='white')
 
 par(mai=c(1.02, 1.02, 0.82, 0.42), xpd=NA) 
 plot.stacked(2005:2016, df[2:(nc+1)], xlab='Year', xaxt='n', yaxt='n', xlim=c(2004, 2016),   
-         lwd = 2, bty='n', border='white', cex.lab=1.5, main='NO2 Density', 
+         lwd = 2, bty='n', border='white', cex.lab=1.5, main='NO2 Concentration', 
         col=rgb(1:nc*(155/nc), 128, 128, 200, maxColorValue = 255) ) 
 axis(1, at=2005:2016, cex.axis=1.5)
 

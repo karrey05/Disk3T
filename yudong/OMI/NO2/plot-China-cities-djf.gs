@@ -94,7 +94,7 @@ if (ir > 9)
 endif 
 
 *'set frame off'
-'set vrange 0.5 3' 
+'set vrange 0.5 2.6' 
 'set cthick 40' 
 if (ir > 9 ) 
  'set cthick 60'
@@ -102,6 +102,7 @@ endif
 'set cmark 0' 
 'set ccolor 'color.ir
 'set grid off' 
+'set gxout shaded'
 'define ts=aave(no2, lon='lon1', lon='lon2', lat='lat1', lat='lat2')' 
 * set up Bejing baseline value 
 if (ir = 1) 
@@ -110,7 +111,7 @@ endif
 'd ts/base' 
 'set strsiz 0.18'
 'set string 'color.ir
-ypos=8-ir*0.3
+ypos=8.2-ir*0.3
 'draw string 1.5 'ypos' 'city.ir
 'draw xlab Year'
 'draw ylab Ratio to Beijing 2005'
