@@ -12,12 +12,13 @@ program reproj
       integer :: ic, ir, iargc
       real (kind=4), allocatable :: lon(:, :), lat(:, :), factor(:) 
       !integer*2, allocatable :: ialb(:, :) 
-      real*4, allocatable :: ialb(:, :) 
       real*4 :: oalb(nc, nr) 
+      character, allocatable :: calb(:)
+      integer, allocatable :: ialb(:, :) 
 
       ! declarations
       integer (kind=4) :: fid,swid,status,astat
-      integer (hsize_t) :: rank,dims(2),maxdims(2), datatype,i,j, nx, ny
+      integer (hsize_t) :: rank,dims(2),maxdims(2), datatype,i,j, nx, ny, ix
       character (len=255) :: dimlist
 
       !======= choose the file and field to read
@@ -63,15 +64,40 @@ program reproj
       nx = dims(1) 
       ny = dims(2) 
       write(*, *)"nx = ", nx, "  ny=", ny
+      !allocate(ialb(nx, ny)) 
+      allocate(calb(nx*ny*2)) 
       allocate(ialb(nx, ny)) 
       allocate(lat(nx, ny)) 
       allocate(lon(nx, ny)) 
 
-      call h5dread_f(sm_field_id, H5T_STD_U16BE, ialb, dims, status)
+      call h5dread_f(sm_field_id, H5T_STD_U16BE, calb, dims, status)
+      !call h5dread_f(sm_field_id, H5T_STD_U16BE, ialb, dims, status)
       !call h5dread_f(sm_field_id, H5T_NATIVE_REAL, ialb, dims, status)
       if (status .ne. 0) write(*, *) "Failed to read sm" 
  
-      write(*, '(7F14.3)') ialb
+#if 0
+      Do ic=1, nx
+       Do ir = 1, ny*2, 2
+         i=ir+(ic-1)*ny*2 
+         ix = (ir+1)/2
+         ialb(ix, ic) = ichar(calb(i))*256+ichar(calb(i+1)) 
+       End do 
+      End Do 
+#endif
+      Do ir = 1, ny
+       Do ic=1, nx*2, 2
+         i=ic+(ir-1)*nx*2 
+         ix = (ic+1)/2
+         ialb(ix, ir) = ichar(calb(i))*256+ichar(calb(i+1)) 
+       End do 
+      End Do 
+      Do ir=1, ny
+        Do ic=1, nx
+          write(*, '(3I7)')ir, ic,  ialb(ic, ir) 
+        End Do 
+      End Do 
+   
+        
 
 #if 0
 
