@@ -11,7 +11,8 @@ program reproj
       integer, parameter :: nc=3600, nr=1800  ! lat/lon grid
       integer :: ic, ir, iargc
       real (kind=4), allocatable :: lon(:, :), lat(:, :), factor(:) 
-      integer*2, allocatable :: ialb(:, :) 
+      !integer*2, allocatable :: ialb(:, :) 
+      real*4, allocatable :: ialb(:, :) 
       real*4 :: oalb(nc, nr) 
 
       ! declarations
@@ -67,7 +68,10 @@ program reproj
       allocate(lon(nx, ny)) 
 
       call h5dread_f(sm_field_id, H5T_STD_U16BE, ialb, dims, status)
+      !call h5dread_f(sm_field_id, H5T_NATIVE_REAL, ialb, dims, status)
       if (status .ne. 0) write(*, *) "Failed to read sm" 
+ 
+      write(*, '(7F14.3)') ialb
 
 #if 0
 
