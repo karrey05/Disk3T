@@ -1,4 +1,4 @@
-dset t0226087.1gd4r
+dset ^ncc_d20160407.bin
 options little_endian 
 undef -999.0 
 Title VIIRS DNB NCC albedo 0.01-deg 
