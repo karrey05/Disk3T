@@ -10,7 +10,7 @@ program ncc2kml
       ! batch processing of multiple files 
       integer, parameter :: nfiles = 13 
       character*200 :: nccfile(nfiles), geofile(nfiles), kmlfile ! input and output file names 
-      character*200 :: gradsf   !output for grads format 
+      character*200 :: gradsf, ctlf   !output for grads format 
 
       ! assume the swath dimension is always the same 
       integer, parameter ::  nx = 4121,  ny = 3084
@@ -18,10 +18,11 @@ program ncc2kml
       real (kind=4) :: lon(nx, ny), lat(nx, ny), alb(nx, ny), v
 
       ! scope of output  
-      !real, parameter :: res = 0.00675    ! (0.75*360)/(2Pi*6371)   (750m resolution) 
-      real, parameter :: res = 0.009    ! 0.00675 is too stretchy: gaps b/w pixels 
       real, parameter :: minlat=30, maxlat=60.0   ! confine regions to limit kml size 
       real, parameter :: minlon=-10, maxlon=30.0   ! confine regions to limit kml size 
+      real, parameter :: res0 = 0.00675    ! (0.75*360)/(2Pi*6371)   (750m resolution) 
+      real :: resx, resy   ! change lat/lon res with latitude to avoid gaps 
+       
       integer :: nc, nr
 
       !KML stuff 
@@ -36,13 +37,16 @@ program ncc2kml
       !from yellowish to white hot
       data colors/'ff10ffe7', 'ff48fdeb', 'ff34fcf5', 'ff6cfcf7', 'ffabfcf9', 'ffcefffe', 'ffffffff'/ 
       
-      nc = nint( (maxlon - minlon )/res) + 1
-      nr = nint( (maxlat - minlat )/res) + 1
+      resy = res0   
+      resx = res0 / cos( max(abs(minlat), abs(maxlat))*3.1415926 /180.0)  
+      nc = nint( (maxlon - minlon )/resx) + 1
+      nr = nint( (maxlat - minlat )/resy) + 1
       write(*, *) "nc=", nc, " nr=", nr
       allocate(oalb(nc, nr)) 
 
       kmlfile = 'ncc_d20160407.kml' 
       gradsf = 'ncc_d20160407.bin' 
+      ctlf = 'ncc_d20160407.ctl' 
 
       nccfile(1)='NCC/VNCCO_npp_d20160407_t0117457_e0123594_b23021_c20160407072343678640_noaa_ops.h5'
       nccfile(2)='NCC/VNCCO_npp_d20160407_t0123274_e0129392_b23022_c20160407072925744724_noaa_ops.h5'
@@ -119,8 +123,8 @@ program ncc2kml
              clon=lon(i, j) 
              if (clat .GE. minlat .and. clat .LE. maxlat .and. & 
                  clon .GE. minlon .and. clon .LE. maxlon) then  
-               ir = nint ( (clat - minlat )/res ) + 1
-               ic = nint ( (clon - minlon )/res ) + 1
+               ir = nint ( (clat - minlat )/resy ) + 1
+               ic = nint ( (clon - minlon )/resx ) + 1
                oalb(ic, ir) = alb(i, j)
 
            ! kml 
@@ -138,11 +142,11 @@ program ncc2kml
         write(12, '(a)')'                               <LinearRing>'
         write(12, '(a)')'                                       <coordinates>'
         ! important: goes counter-clockwise for correct shading
-        write(12, '(F0.7, A, F0.7, A, F0.1)') clon + res*0.5, ',', clat + res*0.5, ',', h
-        write(12, '(F0.7, A, F0.7, A, F0.1)') clon - res*0.5, ',', clat + res*0.5, ',', h
-        write(12, '(F0.7, A, F0.7, A, F0.1)') clon - res*0.5, ',', clat - res*0.5, ',', h
-        write(12, '(F0.7, A, F0.7, A, F0.1)') clon + res*0.5, ',', clat - res*0.5, ',', h
-        write(12, '(F0.7, A, F0.7, A, F0.1)') clon + res*0.5, ',', clat + res*0.5, ',', h
+        write(12, '(F0.7, A, F0.7, A, F0.1)') clon + resx*0.5, ',', clat + resy*0.5, ',', h
+        write(12, '(F0.7, A, F0.7, A, F0.1)') clon - resx*0.5, ',', clat + resy*0.5, ',', h
+        write(12, '(F0.7, A, F0.7, A, F0.1)') clon - resx*0.5, ',', clat - resy*0.5, ',', h
+        write(12, '(F0.7, A, F0.7, A, F0.1)') clon + resx*0.5, ',', clat - resy*0.5, ',', h
+        write(12, '(F0.7, A, F0.7, A, F0.1)') clon + resx*0.5, ',', clat + resy*0.5, ',', h
         write(12, '(a)')'                                       </coordinates>'
         write(12, '(a)')'                               </LinearRing>'
         write(12, '(a)')'                       </outerBoundaryIs>'
@@ -172,6 +176,22 @@ endif
           write(22, rec=j) oalb(:, j)
         End Do
       close(22)
+
+      open(24, file=ctlf, form="formatted") 
+
+      write(24, '(a)')'dset ^'//trim(gradsf) 
+      write(24, '(a)')'options little_endian' 
+      write(24, '(a)')'undef -999.0' 
+      write(24, '(a)')'Title VIIRS DNB NCC albedo 750km '
+      write(24, '(a, I0.0, a, F0.4, a, F0.5)')'xdef ', nc, ' linear ', minlon, ' ', resx 
+      write(24, '(a, I0.0, a, F0.4, a, F0.5)')'ydef ', nr, ' linear ', minlat, ' ', resy 
+      write(24, '(a)')'zdef 1 linear 1 1'
+      write(24, '(a)')'tdef 1 linear 0Z1Oct2004 1mn'
+      write(24, '(a)')'vars 1'
+      write(24, '(a)')'alb   1 99   alb unitless'
+      write(24, '(a)')'endvars'
+
+      close(24) 
 
      end if 
 
