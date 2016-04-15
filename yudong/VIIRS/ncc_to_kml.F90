@@ -3,6 +3,9 @@ program ncc2kml
 ! Read multiple NCC data files and save to KML 
 
       implicit none
+      !control output type 
+      integer, parameter :: save_grads = 1    ! > 0, save binary 
+      integer, parameter :: save_kml = 0    ! > 0, save kml 
 
       ! batch processing of multiple files 
       integer, parameter :: nfiles = 13 
@@ -11,27 +14,31 @@ program ncc2kml
 
       ! assume the swath dimension is always the same 
       integer, parameter ::  nx = 4121,  ny = 3084
-      integer :: i, j, ic, ir, iargc, nf 
+      integer :: i, j, ic, ir, iargc, nf  
       real (kind=4) :: lon(nx, ny), lat(nx, ny), alb(nx, ny), v
 
-      !lat/lon grid reprojection
-      real, parameter :: lat0=-89.995, lon0=-179.995, gres=0.01
-      integer, parameter :: nc=36000, nr=18000  ! lat/lon grid
-      real*4, allocatable :: oalb(:, :) 
-      integer, parameter :: save_grads = 0    ! > 0, save binary 
+      ! scope of output  
+      !real, parameter :: res = 0.00675    ! (0.75*360)/(2Pi*6371)   (750m resolution) 
+      real, parameter :: res = 0.009    ! 0.00675 is too stretchy: gaps b/w pixels 
+      real, parameter :: minlat=30, maxlat=60.0   ! confine regions to limit kml size 
+      real, parameter :: minlon=-10, maxlon=30.0   ! confine regions to limit kml size 
+      integer :: nc, nr
 
       !KML stuff 
       integer, parameter :: maxcolors=7
       real, parameter :: vmin=4, vmax=64, h=0  ! compute from data, logscale display 
-      real, parameter :: res = 0.00675    ! (0.75*360)/(2Pi*6371)   (750m resolution) 
-      real, parameter :: minlat=30, maxlat=60.0   ! confine regions to limit kml size 
-      real, parameter :: minlon=-10, maxlon=30.0   ! confine regions to limit kml size 
       real :: clat, clon 
       character*8 ::  colors(maxcolors)   
+
+      !output data for grads
+      real*4, allocatable :: oalb(:, :) 
 
       !from yellowish to white hot
       data colors/'ff10ffe7', 'ff48fdeb', 'ff34fcf5', 'ff6cfcf7', 'ffabfcf9', 'ffcefffe', 'ffffffff'/ 
       
+      nc = nint( (maxlon - minlon )/res) + 1
+      nr = nint( (maxlat - minlat )/res) + 1
+      write(*, *) "nc=", nc, " nr=", nr
       allocate(oalb(nc, nr)) 
 
       kmlfile = 'ncc_d20160407.kml' 
@@ -65,8 +72,8 @@ program ncc2kml
       geofile(12)='NCC-Geo/GNCCO_npp_d20160407_t0220236_e0226283_b23022_c20160407082619370093_noaa_ops.h5'
       geofile(13)='NCC-Geo/GNCCO_npp_d20160407_t0226087_e0232046_b23022_c20160407083200452895_noaa_ops.h5'
 
-      !kml header 
-
+ !kml output ----------------------------------------------------
+ if (save_kml > 0 ) then 
       open(12, file=trim(kmlfile), form="formatted")
 
 ! header
@@ -97,6 +104,9 @@ program ncc2kml
         write(12, '(a)')'       </Style>'
       End Do
 
+ end if 
+ !kml output ----------------------------------------------------
+
       oalb = -9999.0 
       Do nf = 1, nfiles 
         call read_alb_geo(nccfile(nf), geofile(nf), alb, lat, lon, nx, ny) 
@@ -105,25 +115,19 @@ program ncc2kml
       
         Do j=1, ny
           Do i=1, nx
-           !lat/lon projection for GrADS
-           if (lat(i, j) .GT. -900 .and. lon(i, j) .GT. -900) then
-             ir = nint ( (lat(i, j) - lat0 )/gres ) + 1
-             ic = nint ( (lon(i, j) - lon0 )/gres ) + 1
-             if (ic .GT. nc .or. ir .GT. nr) then
-               write(*, *) ic, ir, lat(i, j), lon(i, j)
-             else
+             clat=lat(i, j)
+             clon=lon(i, j) 
+             if (clat .GE. minlat .and. clat .LE. maxlat .and. & 
+                 clon .GE. minlon .and. clon .LE. maxlon) then  
+               ir = nint ( (clat - minlat )/res ) + 1
+               ic = nint ( (clon - minlon )/res ) + 1
                oalb(ic, ir) = alb(i, j)
-             end if
-           end if
 
            ! kml 
            v = alb(i, j) 
-           if ( v .GE. vmin .and. v .LT. vmax) then  ! plot 
+           if ( v .GE. vmin .and. v .LT. vmax .and. save_kml .GT. 0) then  ! plot 
              ic = nint( log(v)/log(2.0) ) 
              if (ic > maxcolors) ic=maxcolors 
-             clat=lat(i, j)
-             clon=lon(i, j) 
-             if (clat .GT. minlat .and. clat .LT. maxlat .and. clon .GE. minlon .and. clon .LE. maxlon) then  
         write(12, '(a)')'       <Placemark>'
         write(12, '(a, I0.0, a)')'              <styleUrl>#st', ic, '</styleUrl>'
 
@@ -152,11 +156,14 @@ program ncc2kml
 
       End Do   ! nfiles 
 
+if (save_kml > 0) then 
        write(12, '(a)')'</Document>'
        write(12, '(a)')'</kml>'
        write(12, *)
        close(12)
   
+endif 
+
      if(save_grads .GT. 0) then 
 
       write(*, *) "Saving binary format ...", nc, nr

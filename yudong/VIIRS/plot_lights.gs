@@ -1,16 +1,19 @@
 
 'reinit'
 'open alb.ctl'
-'set lat 40 50'
-'set lon 0 20'
+'set lat 36 57'
+'set lon -10 20'
 'set mpdset hires'
 'set grads off'
 'set grid off'
-'set gxout shaded'
-'set clevs 2 4 8 16 32 64 128'
-'d maskout(maskout(alb, alb-2), 100-alb)'
+'si_styles'
+'set gxout grfill' 
+'set clevs 2 4 8 16 32 64 128' 
+'set ccols 990 992 994 999 999 999 999' 
+'d maskout(maskout(alb, alb-2), 200-alb)'
 *Contouring: 20 to 90 interval 10
-'cbar'
-'gxprint ncc_d20160407.png x1000 y800 black' 
+'gxprint ncc_d20160407.png x5200 y3900 black' 
+'gxprint ncc_d20160407-sm.png x2000 y1700 black' 
+'quit'
 
 
