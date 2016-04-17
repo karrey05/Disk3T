@@ -3,6 +3,14 @@ program ncc2kml
 ! Read multiple NCC data files and save to KML 
 
       implicit none
+   interface
+    subroutine read_alb_geo(nccfile, geofile, alb, lat, lon, nx, ny)
+      character*200, intent(in) :: nccfile, geofile
+      integer, intent(out) :: nx, ny
+      real, allocatable, intent(out) :: alb(:, :), lat(:, :), lon(:, :)
+    end subroutine
+   end interface
+
       !control output type 
       integer, parameter :: save_grads = 1    ! > 0, save binary 
       integer, parameter :: save_kml = 0    ! > 0, save kml 
@@ -12,10 +20,10 @@ program ncc2kml
       character*200 :: nccfile(nfiles), geofile(nfiles), kmlfile ! input and output file names 
       character*200 :: gradsf, ctlf   !output for grads format 
 
-      ! assume the swath dimension is always the same 
-      integer, parameter ::  nx = 4121,  ny = 3084
+      !  swath dimension
+      integer :: nx, ny
       integer :: i, j, ic, ir, iargc, nf  
-      real (kind=4) :: lon(nx, ny), lat(nx, ny), alb(nx, ny), v
+      real (kind=4), allocatable :: lon(:, :), lat(:, :), alb(:, :), v
 
       ! scope of output  
       real, parameter :: minlat=30, maxlat=60.0   ! confine regions to limit kml size 

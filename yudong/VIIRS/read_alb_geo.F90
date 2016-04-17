@@ -1,5 +1,10 @@
 
-!subroutine to read from a pare of NCC and NCC-geo files 
+! This file contains two subroutines: 
+! read_alb_geo: return data with scaling factors c0 and c1 applied
+! read_alb_geo_raw: return raw data and scaling factors c0 and c1, for saving the raw data 
+!                   more compactly. 
+
+!subroutine to read from a pair of NCC and NCC-geo files 
   subroutine read_alb_geo(nccfile, geofile, alb, lat, lon, nx, ny) 
 
 ! Read NCC data and save to 0.01-deg lat/lon 
@@ -10,12 +15,10 @@
       implicit none
 
       character*200, intent(in) :: nccfile, geofile
-      integer, intent(in) :: nx, ny 
-      real, intent(out) :: alb(nx, ny), lat(nx, ny), lon(nx, ny) 
+      integer, intent(out) :: nx, ny 
+      real, allocatable, intent(out) :: alb(:, :), lat(:, :), lon(:, :) 
 
       integer :: ic, ir
-      real (kind=4), allocatable :: factor(:) 
-      !integer*2, allocatable :: ialb(:, :) 
       real*4 ::  c1, c2
       character, allocatable :: calb(:)
       integer, allocatable :: ialb(:, :) 
@@ -42,9 +45,6 @@
       call h5fopen_f(nccfile, H5F_ACC_RDONLY_F, file_id, status) 
       if (status .ne. 0) write(*, *) "Failed to open HDF file" 
       
-!      call h5gopen_f(file_id,sm_gr_name,sm_gr_id, status)
-!      if (status .ne. 0) write(*, *) "Failed to get group: ", sm_gr_name 
-
       call h5dopen_f(file_id, ncc_name, field_id, status)
       if (status .ne. 0) write(*, *) "Failed to get dataset: ", ncc_name 
 
@@ -54,12 +54,18 @@
       CALL h5sget_simple_extent_dims_f(dataspace, dims, maxdims, status)
       if (status .lt. 0) write(*, *) "Failed to get dims, status=", status 
 
-      if (nx .ne. dims(1) .or. ny .ne. dims(2) ) then 
-          write(*, *)' Problem: nx or ny differ from dims' 
-      end if 
-      !allocate(ialb(nx, ny)) 
+      nx = dims(1) 
+      ny = dims(2) 
+
       allocate(calb(nx*ny*2)) 
       allocate(ialb(nx, ny)) 
+
+      if (allocated(alb)) deallocate(alb) 
+      if (allocated(lat)) deallocate(lat) 
+      if (allocated(lon)) deallocate(lon) 
+      allocate(alb(nx, ny)) 
+      allocate(lat(nx, ny)) 
+      allocate(lon(nx, ny)) 
 
       call h5dread_f(field_id, H5T_STD_U16BE, calb, dims, status)
       if (status .ne. 0) write(*, *) "Failed to read sm" 
@@ -102,9 +108,6 @@
       call h5fopen_f(geofile, H5F_ACC_RDONLY_F, file_id, status)
       if (status .ne. 0) write(*, *) "Failed to open GEO file"
 
-!      call h5gopen_f(file_id,sm_gr_name,sm_gr_id, status)
-!      if (status .ne. 0) write(*, *) "Failed to get group: ", sm_gr_name
-
       call h5dopen_f(file_id, lat_name, field_id, status)
       if (status .ne. 0) write(*, *) "Failed to get dataset: ", lat_name
 
@@ -136,3 +139,5 @@
       return 
        
 end subroutine read_alb_geo
+
+
